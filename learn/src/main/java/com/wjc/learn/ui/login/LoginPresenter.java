@@ -1,5 +1,7 @@
 package com.wjc.learn.ui.login;
 
+import com.wjc.learn.R;
+
 /**
  * Project_NAME : todoapp
  * Package_NAME : com.wjc.learn.ui.login
@@ -25,12 +27,12 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void onServerLoginClick(String email, String password) {
         if (email == null || email.isEmpty()) {
-           view.empty_email();
+           view.onError(R.string.empty_email);
             return;
         }
 
         if (password == null || password.isEmpty()) {
-            view.empty_password();
+            view.onError(R.string.empty_password);
             return;
         }
 

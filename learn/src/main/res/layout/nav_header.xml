@@ -15,25 +15,39 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
-    android:gravity="bottom"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+             android:layout_width="match_parent"
+             android:layout_height="192dp"
+             android:background="@drawable/bg_design2"
+             android:gravity="bottom"
+             android:orientation="vertical"
+             android:padding="16dp"
+             android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/me"/>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="TEST"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/ic_action_accept" />
+        android:src="@drawable/ic_action_accept"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="TEST"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </FrameLayout>

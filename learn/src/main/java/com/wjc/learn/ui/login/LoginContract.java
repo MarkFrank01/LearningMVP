@@ -16,11 +16,7 @@ public interface LoginContract {
     interface View extends BaseView<Presenter>{
         void openMainActivity();
 
-        void empty_email();
-
-        void invalid_email();
-
-        void empty_password();
+        void onError(int message);
     }
 
     interface Presenter extends BasePresenter{
