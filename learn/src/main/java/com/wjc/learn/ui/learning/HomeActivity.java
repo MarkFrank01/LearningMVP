@@ -1,5 +1,7 @@
-package com.wjc.learn;
+package com.wjc.learn.ui.learning;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -12,10 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.wjc.learn.ui.first.FirstFragment;
-import com.wjc.learn.ui.first.FirstPresenter;
-import com.wjc.learn.ui.first.ToFindItemsInteractorImpl;
-import com.wjc.learn.ui.second.SecondFragment;
+import com.wjc.learn.R;
+import com.wjc.learn.ui.learning.first.FirstFragment;
+import com.wjc.learn.ui.learning.first.FirstPresenter;
+import com.wjc.learn.ui.learning.first.ToFindItemsInteractorImpl;
+import com.wjc.learn.ui.learning.second.SecondFragment;
+
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,6 +33,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private static final String KEY_NAV_ITEM = "CURRENT_NAV_ITEM";
 
     private int selectedNavItem = 0;
+
+    public static Intent getStartIntent(Context context){
+        Intent intent = new Intent(context,HomeActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

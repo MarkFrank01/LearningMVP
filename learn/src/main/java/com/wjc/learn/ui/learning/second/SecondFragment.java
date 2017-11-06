@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.second;
+package com.wjc.learn.ui.learning.second;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

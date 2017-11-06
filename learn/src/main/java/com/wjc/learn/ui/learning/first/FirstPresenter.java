@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.first;
+package com.wjc.learn.ui.learning.first;
 
 import java.util.List;
 
