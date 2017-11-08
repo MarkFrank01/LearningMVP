@@ -16,9 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.learning.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.draw_view.PageOneActivity"/>
+        <activity android:name=".ui.draw_view.BaseViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

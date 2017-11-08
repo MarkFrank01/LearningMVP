@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.wjc.learn.R;
+import com.wjc.learn.ui.draw_view.BaseViewActivity;
 import com.wjc.learn.ui.learning.first.FirstFragment;
 import com.wjc.learn.ui.learning.first.FirstPresenter;
 import com.wjc.learn.ui.learning.first.ToFindItemsInteractorImpl;
@@ -34,8 +35,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private int selectedNavItem = 0;
 
-    public static Intent getStartIntent(Context context){
-        Intent intent = new Intent(context,HomeActivity.class);
+    public static Intent getStartIntent(Context context) {
+        Intent intent = new Intent(context, HomeActivity.class);
         return intent;
     }
 
@@ -75,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     .commit();
         }
 
-        new FirstPresenter(firstFragment,new ToFindItemsInteractorImpl());
+        new FirstPresenter(firstFragment, new ToFindItemsInteractorImpl());
 
 
         // Show the default fragment.
@@ -120,11 +121,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.one) {
-            showFirstFragment();
-        } else if (id == R.id.two) {
-            showSecondFragment();
+
+        switch (item.getItemId()) {
+            case R.id.one:
+                showFirstFragment();
+                break;
+
+            case R.id.two:
+                showSecondFragment();
+                break;
+
+            case R.id.my_view:
+                Intent intent = new Intent(HomeActivity.this, BaseViewActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                break;
         }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -134,6 +145,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     /**
      * Store the state when the activity may be recycled.
+     *
      * @param outState The state data.
      */
     @Override
@@ -155,7 +167,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    private void showFirstFragment(){
+    private void showFirstFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.show(firstFragment);
         fragmentTransaction.hide(secondFragment);
@@ -165,7 +177,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setCheckedItem(R.id.one);
     }
 
-    private void showSecondFragment(){
+    private void showSecondFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.show(secondFragment);
         fragmentTransaction.hide(firstFragment);

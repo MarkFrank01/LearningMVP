@@ -43,11 +43,5 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_action_accept"/>
-
 
 </FrameLayout>
