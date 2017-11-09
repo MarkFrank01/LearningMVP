@@ -1,5 +1,8 @@
 package com.wjc.learn.ui.draw_view;
 
+import com.wjc.learn.BasePresenter;
+import com.wjc.learn.BaseView;
+
 /**
  * Project_NAME : todoapp
  * Package_NAME : com.wjc.learn.ui.draw_view.draw_1
@@ -8,5 +11,15 @@ package com.wjc.learn.ui.draw_view;
  * Describe : TODO
  */
 
-public class BaseViewContract {
+public interface BaseViewContract {
+
+    interface View extends BaseView<Presenter>{
+        void showViewPager();
+
+        void showTabLayout();
+    }
+
+    interface Presenter extends BasePresenter{
+
+    }
 }

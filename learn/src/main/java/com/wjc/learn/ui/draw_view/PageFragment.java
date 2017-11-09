@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,6 @@ public class PageFragment extends Fragment {
         args.putInt("sampleLayoutRes",sampleLayoutRes);
         args.putInt("practiceLayoutRes",practiceLayoutRes);
         pageFragment.setArguments(args);
-
         return pageFragment;
     }
 

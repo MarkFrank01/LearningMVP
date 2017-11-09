@@ -43,18 +43,14 @@ public class BaseViewActivity extends AppCompatActivity {
 
     private BaseViewFragment baseViewFragment;
     private BaseViewFragment2 baseViewFragment2;
-//    private FirstFragment firstFragment;
 
+    List<PageModel> pageModels = new ArrayList<>();
 
-    //    private TabLayout tabLayout;
-//    private ViewPager viewPager;
-//    List<PageModel> pageModels = new ArrayList<>();
-//
-//    {
-//        pageModels.add(new PageModel(R.layout.sample_color, R.layout.practice_color, R.string.title_draw_color));
-//        pageModels.add(new PageModel(R.layout.sample_circle, R.layout.practice_circle, R.string.title_draw_circle));
-//
-//    }
+    {
+        pageModels.add(new PageModel(R.layout.sample_color, R.layout.practice_color, R.string.title_draw_color));
+        pageModels.add(new PageModel(R.layout.sample_circle, R.layout.practice_circle, R.string.title_draw_circle));
+
+    }
     private static final String KEY_NAV_ITEM = "CURRENT_NAV_ITEM";
 
     private int selectedNavItem = 0;
@@ -87,7 +83,8 @@ public class BaseViewActivity extends AppCompatActivity {
         } else {
             baseViewFragment = (BaseViewFragment) getSupportFragmentManager().findFragmentById(R.id.content_main);
             if (savedInstanceState == null) {
-                baseViewFragment = BaseViewFragment.newInstance();
+//                baseViewFragment = BaseViewFragment.newInstance();
+                baseViewFragment = BaseViewFragment.newInstance2(pageModels);
             }
 
             baseViewFragment2 = (BaseViewFragment2) getSupportFragmentManager().findFragmentById(R.id.content_main);
@@ -116,29 +113,6 @@ public class BaseViewActivity extends AppCompatActivity {
             showBaseViewFragment2();
         }
 
-//        viewPager =(ViewPager)findViewById(R.id.pager);
-//        viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
-//            @Override
-//            public Fragment getItem(int position) {
-//                PageModel pageModel = pageModels.get(position);
-//
-//                return PageFragment.newInstance(pageModel.getSampleLayoutRes(),pageModel.getPracticeLayoutRes());
-//            }
-//
-//            @Override
-//            public int getCount() {
-//                return pageModels.size();
-//            }
-//
-//            @Override
-//            public CharSequence getPageTitle(int position) {
-//                return getString(pageModels.get(position).getTitleRes());
-//            }
-//
-//        });
-//
-//        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
-//        tabLayout.setupWithViewPager(viewPager);
     }
 
     /**

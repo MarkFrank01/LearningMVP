@@ -4,6 +4,7 @@ import android.support.annotation.LayoutRes;
 
 import com.wjc.learn.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,17 +16,19 @@ import java.util.List;
  * Describe : TODO
  */
 
-public class PageModel {
-        @LayoutRes
-        int sampleLayoutRes;
-        @LayoutRes int practiceLayoutRes;
-        @LayoutRes int titleRes;
+public class PageModel implements Serializable{
+    @LayoutRes
+    int sampleLayoutRes;
+    @LayoutRes
+    int practiceLayoutRes;
+    @LayoutRes
+    int titleRes;
 
-        public PageModel(int sampleLayoutRes, int practiceLayoutRes, int titleRes) {
-            this.sampleLayoutRes = sampleLayoutRes;
-            this.practiceLayoutRes = practiceLayoutRes;
-            this.titleRes = titleRes;
-        }
+    public PageModel(int sampleLayoutRes, int practiceLayoutRes, int titleRes) {
+        this.sampleLayoutRes = sampleLayoutRes;
+        this.practiceLayoutRes = practiceLayoutRes;
+        this.titleRes = titleRes;
+    }
 
     public int getSampleLayoutRes() {
         return sampleLayoutRes;

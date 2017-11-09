@@ -37,6 +37,7 @@ public class BaseViewFragment2 extends Fragment{
         return new BaseViewFragment2();
     }
 
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,6 @@ public class BaseViewFragment2 extends Fragment{
             @Override
             public Fragment getItem(int position) {
                 PageModel pageModel = pageModels.get(position);
-                Log.e("2","2!!!!!!!!!!!");
                 return PageFragment.newInstance(pageModel.getSampleLayoutRes(),pageModel.getPracticeLayoutRes());
             }
 
