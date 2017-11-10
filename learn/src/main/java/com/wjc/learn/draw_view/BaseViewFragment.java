@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.draw_view;
+package com.wjc.learn.draw_view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,7 +6,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +14,11 @@ import com.wjc.learn.R;
 import com.wjc.learn.data.PageModel;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Project_NAME : todoapp
- * Package_NAME : com.wjc.learn.ui.draw_view.myview1_1
+ * Package_NAME : com.wjc.learn.draw_view.myview1_1
  * File_NAME : BaseViewFragment
  * Created by WJC on 2017/11/7 15:11
  * Describe : TODO
@@ -32,10 +30,6 @@ public class BaseViewFragment extends Fragment{
     private ViewPager viewPager;
 
     FragmentPagerAdapter pagerAdapter;
-
-//    List<PageModel> pageModels = new ArrayList<>();{
-//        pageModels.add(new PageModel(R.layout.sample_color,R.layout.practice_color,R.string.title_draw_color));
-//    }
 
     List<PageModel> pageModels2;
 
@@ -60,7 +54,6 @@ public class BaseViewFragment extends Fragment{
         Bundle bundle = getArguments();
         if (bundle!=null){
             pageModels2= (List<PageModel>) bundle.getSerializable("MorePageModel");
-            Log.e("pageModels2",pageModels2.size()+"+++++++++");
         }
 
         pagerAdapter = new FragmentPagerAdapter(getActivity().getSupportFragmentManager()) {
@@ -80,7 +73,6 @@ public class BaseViewFragment extends Fragment{
                 return getString(pageModels2.get(position).getTitleRes());
             }
         };
-
     }
 
     @Nullable

@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.login;
+package com.wjc.learn.login;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,9 +10,8 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.wjc.learn.ui.learning.HomeActivity;
+import com.wjc.learn.draw_view.BaseViewActivity;
 import com.wjc.learn.R;
 
 
@@ -42,8 +41,9 @@ public class LoginActivity extends Activity implements LoginContract.View {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onServerLoginClick(email.getText().toString(),
-                        password.getText().toString());
+//                presenter.onServerLoginClick(email.getText().toString(),
+//                        password.getText().toString());
+                openMainActivity();
             }
         });
 
@@ -56,7 +56,7 @@ public class LoginActivity extends Activity implements LoginContract.View {
 
     @Override
     public void openMainActivity() {
-        Intent intent = HomeActivity.getStartIntent(LoginActivity.this);
+        Intent intent = BaseViewActivity.getStartIntent(LoginActivity.this);
         startActivity(intent);
         finish();
     }

@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.draw_view.myview1_1;
+package com.wjc.learn.draw_view.myview1_1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,7 +9,7 @@ import android.view.View;
 
 /**
  * Project_NAME : todoapp
- * Package_NAME : com.wjc.learn.ui.draw_view.myview1_1
+ * Package_NAME : com.wjc.learn.draw_view.myview1_1
  * File_NAME : Practice1DrawColorView
  * Created by WJC on 2017/11/7 14:43
  * Describe : TODO

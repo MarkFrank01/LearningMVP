@@ -1,10 +1,10 @@
-package com.wjc.learn.ui.login;
+package com.wjc.learn.login;
 
 import com.wjc.learn.R;
 
 /**
  * Project_NAME : todoapp
- * Package_NAME : com.wjc.learn.ui.login
+ * Package_NAME : com.wjc.learn.login
  * File_NAME : LoginPresenter
  * Created by WJC on 2017/11/6 14:07
  * Describe : TODO

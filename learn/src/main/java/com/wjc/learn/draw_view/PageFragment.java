@@ -1,10 +1,9 @@
-package com.wjc.learn.ui.draw_view;
+package com.wjc.learn.draw_view;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import com.wjc.learn.R;
 
 /**
  * Project_NAME : todoapp
- * Package_NAME : com.wjc.learn.ui.draw_view.draw_1
+ * Package_NAME : com.wjc.learn.draw_view.draw_1
  * File_NAME : PageFragment
  * Created by WJC on 2017/11/7 13:57
  * Describe : TODO

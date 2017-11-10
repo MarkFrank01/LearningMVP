@@ -1,4 +1,4 @@
-package com.wjc.learn.ui.draw_view;
+package com.wjc.learn.draw_view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,7 +6,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,7 @@ import java.util.List;
 
 /**
  * Project_NAME : todoapp
- * Package_NAME : com.wjc.learn.ui.draw_view.myview1_1
+ * Package_NAME : com.wjc.learn.draw_view.myview1_1
  * File_NAME : BaseViewFragment
  * Created by WJC on 2017/11/7 15:21
  * Describe : TODO
